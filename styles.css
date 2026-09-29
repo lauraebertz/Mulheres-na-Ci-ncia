@@ -1,0 +1,1001 @@
+:root {
+    --vinho: #442432;
+    --petrol: #43777a;
+    --rubi: #c02948;
+    --coral: #d95b45;
+    --creme: #f0edea;
+
+    --branco: #ffffff;
+    --texto: #2f2a2c;
+    --cinza-claro: #e8e2df;
+
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--creme);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.navbar {
+    background-color: var(--vinho);
+    padding: 8px 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-container {
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-container img {
+    width: 62px;
+    height: 62px;
+
+    object-fit: contain;
+
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* =========================
+   TÍTULO DO SITE
+========================= */
+
+.titulo-projeto {
+    margin: 0;
+
+    color: var(--creme);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+
+    line-height: 1.15;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   MENU PRINCIPAL
+========================= */
+
+.menu-principal {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+.menu-principal > li {
+    position: relative;
+}
+
+.menu-principal > li > a {
+    display: block;
+
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    padding: 10px 10px;
+
+    border-radius: 6px;
+
+    white-space: nowrap;
+
+    transition: 0.25s;
+}
+
+.menu-principal > li > a:hover {
+    background-color: var(--petrol);
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   SETINHA
+========================= */
+
+.seta {
+    color: var(--coral);
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+
+/* =========================
+   SUBMENU
+========================= */
+
+.submenu {
+    display: none;
+
+    position: absolute;
+
+    top: calc(100%);
+    left: 0;
+
+    min-width: 220px;
+
+    padding: 8px 0;
+    margin: 0;
+
+    list-style: none;
+
+    background-color: var(--branco);
+
+    border-radius: 8px;
+
+    border-top: 4px solid var(--coral);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+    overflow: hidden;
+
+    z-index: 2000;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+
+    padding: 11px 16px;
+
+    color: var(--vinho);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.submenu li a:hover {
+    background-color: var(--creme);
+    color: var(--rubi);
+
+    padding-left: 20px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    color: var(--vinho);
+
+    font-size: 2rem;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--vinho);
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL DA HOME
+========================= */
+
+.inicio {
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.inicio-texto {
+    flex: 1;
+}
+
+.inicio-texto h2 {
+    font-size: 3rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.inicio-texto p {
+    font-size: 17px;
+}
+
+.inicio-destaque {
+    color: var(--petrol);
+
+    font-size: 13px !important;
+
+    font-weight: bold;
+
+    letter-spacing: 1.4px;
+}
+
+.inicio-imagem {
+    flex: 0 0 380px;
+}
+
+.inicio-imagem img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes-inicio {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: var(--vinho);
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 7px;
+
+    transition: 0.25s;
+}
+
+.botao:hover {
+    background-color: var(--petrol);
+
+    transform: translateY(-2px);
+}
+
+.botao-secundario {
+    background-color: transparent;
+
+    color: var(--vinho);
+
+    border: 2px solid var(--vinho);
+}
+
+.botao-secundario:hover {
+    background-color: var(--vinho);
+
+    color: var(--branco);
+}
+
+
+/* =========================
+   VOCÊ SABIA
+========================= */
+
+.voce-sabia {
+    max-width: 1000px;
+
+    margin: 50px auto;
+
+    padding: 35px;
+
+    background-color: var(--vinho);
+
+    color: var(--creme);
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra);
+}
+
+.voce-sabia h2 {
+    color: var(--creme);
+
+    margin-bottom: 12px;
+}
+
+.voce-sabia p {
+    margin-bottom: 15px;
+}
+
+.link-destaque {
+    color: var(--creme);
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.link-destaque:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SOBRE O PROJETO
+========================= */
+
+.sobre-projeto {
+    max-width: 950px;
+
+    margin: 70px auto;
+
+    padding: 40px;
+
+    background-color: var(--branco);
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra);
+
+    border-left: 7px solid var(--petrol);
+}
+
+
+/* =========================
+   DESTAQUE ADA
+========================= */
+
+.destaque-ada {
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 45px;
+}
+
+.ada-imagem {
+    flex: 0 0 320px;
+}
+
+.ada-imagem img {
+    width: 100%;
+    height: 340px;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra);
+}
+
+.ada-texto {
+    flex: 1;
+}
+
+.categoria {
+    color: var(--petrol);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================
+   ÁREAS
+========================= */
+
+.areas {
+    max-width: 1150px;
+
+    margin: 80px auto;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.cards-areas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin: 35px 0;
+}
+
+.card-area {
+    background-color: var(--branco);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: var(--sombra);
+
+    transition: 0.25s;
+
+    border-top: 5px solid var(--petrol);
+}
+
+.card-area:hover {
+    transform: translateY(-5px);
+}
+
+.card-area h3 {
+    margin-top: 0;
+}
+
+.card-area p {
+    font-size: 14px;
+}
+
+
+/* =========================
+   REPOSITÓRIO NA HOME
+========================= */
+
+.chamada-repositorio {
+    max-width: 1000px;
+
+    margin: 70px auto;
+
+    padding: 45px;
+
+    background-color: var(--petrol);
+
+    color: var(--branco);
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: var(--sombra);
+}
+
+.chamada-repositorio h2 {
+    color: var(--branco);
+}
+
+.chamada-repositorio .botao {
+    background-color: var(--vinho);
+}
+
+
+/* =========================
+   CONTEÚDO DAS OUTRAS PÁGINAS
+========================= */
+
+.conteudo-principal {
+    max-width: 1050px;
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    background-color: var(--branco);
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra);
+}
+
+.conteudo-principal h2 {
+    border-left: 7px solid var(--petrol);
+
+    padding-left: 15px;
+}
+
+.conteudo-principal p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   IMAGENS GERAIS
+========================= */
+
+.conteudo-principal img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   TABELAS
+========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 30px 0;
+
+    background-color: var(--branco);
+
+    box-shadow: var(--sombra);
+}
+
+th,
+td {
+    border: 1px solid #d8d3d0;
+
+    padding: 13px 15px;
+
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--vinho);
+
+    color: var(--branco);
+}
+
+tbody th {
+    background-color: #f7f4f2;
+
+    color: var(--vinho);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #faf8f7;
+}
+
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.secao-formulario {
+    max-width: 700px;
+
+    margin: 60px auto;
+
+    padding: 35px;
+
+    background-color: var(--branco);
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+}
+
+.campo label {
+    color: var(--vinho);
+
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #cfc7c4;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+
+    border-color: var(--petrol);
+}
+
+#btnEnviar {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    background-color: var(--petrol);
+
+    color: var(--branco);
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+#btnEnviar:hover {
+    background-color: var(--vinho);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    margin-top: 80px;
+
+    background-color: var(--vinho);
+
+    color: var(--creme);
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+.footer-conteudo {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.footer-conteudo img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 10px;
+}
+
+.footer-conteudo p {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1150px) {
+
+    .titulo-projeto {
+        display: none;
+    }
+
+    .menu-principal {
+        gap: 3px;
+    }
+
+    .menu-principal > li > a {
+        font-size: 12px;
+
+        padding: 9px 7px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu-principal {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin-left: 0;
+    }
+
+    .inicio {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .inicio-imagem {
+        width: 100%;
+        max-width: 450px;
+
+        flex: auto;
+    }
+
+    .destaque-ada {
+        flex-direction: column;
+    }
+
+    .ada-imagem {
+        width: 100%;
+        max-width: 350px;
+
+        flex: auto;
+    }
+
+    .cards-areas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .logo-container img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menu-principal {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .menu-principal > li > a {
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        margin-top: 4px;
+    }
+
+    .inicio {
+        margin-top: 25px;
+    }
+
+    .inicio-texto h2 {
+        font-size: 2.2rem;
+    }
+
+    .cards-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-projeto,
+    .voce-sabia,
+    .chamada-repositorio,
+    .conteudo-principal,
+    .secao-formulario {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        padding: 25px;
+    }
+    /* BOTÃO DO MENU MOBILE */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--creme);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .logo-container img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .titulo-projeto {
+        flex: 1;
+        font-size: 15px;
+        white-space: normal;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-principal {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin: 10px 0 0 0;
+
+        gap: 4px;
+    }
+
+    .menu-principal.ativo {
+        display: flex;
+    }
+
+    .menu-principal > li {
+        width: 100%;
+    }
+
+    .menu-principal > li > a {
+        width: 100%;
+
+        display: block;
+
+        padding: 13px 15px;
+
+        text-align: left;
+
+        font-size: 14px;
+
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+
+    /* SUBMENU NO CELULAR */
+
+    .submenu {
+        display: none;
+
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 0;
+
+        margin: 0;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        background-color: white;
+    }
+
+    .dropdown.aberto .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+        padding: 11px 25px;
+
+        font-size: 13px;
+    }
+
+
+    /* DESATIVA O HOVER DO COMPUTADOR NO CELULAR */
+
+    .dropdown:hover .submenu {
+        display: none;
+    }
+
+    .dropdown.aberto:hover .submenu {
+        display: block;
+    }
+
+}
+
+}
